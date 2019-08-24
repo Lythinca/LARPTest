@@ -65,7 +65,6 @@ Citizen.CreateThread(function()
 			end
 		end
 	end
-	--[[End code chunk for animations.]]--
 
 		if doors[i]["locked"] == true then
                         FreezeEntityPosition(closeDoor, false)

@@ -43,28 +43,29 @@ Citizen.CreateThread(function()
                 end
 				
                 if IsControlJustPressed(1,51) then	
-								--[[Code chunk below is for animations. I believe it could be put here, or individually inside if the doors are locked = true/= false. Clarification?]]--
-						if (GetEntityModel(ped) == GetHashKey("mp_m_freemode_01")) then
-						RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
-						while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
-							Citizen.Wait(0)
-						end
-						TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
-					elseif (GetEntityModel(ped) == GetHashKey("mp_f_freemode_01")) then
-						RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
-						while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
-							Citizen.Wait(0)
-						end
-						TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
-					else
-						RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
-						while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
-							Citizen.Wait(0)
-						end
-						TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
-					end
-				end
-			end													--[[End code chunk for animations.]]--
+	--[[Code chunk below is for animations. I believe it could be put here, or individually inside if the doors are locked = true/= false. Clarification?]]--
+			if (GetEntityModel(ped) == GetHashKey("mp_m_freemode_01")) then
+				RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
+			while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
+				Citizen.Wait(0)
+			end
+				TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
+			elseif (GetEntityModel(ped) == GetHashKey("mp_f_freemode_01")) then
+				RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
+			while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
+				Citizen.Wait(0)
+			end
+				TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
+			else
+				RequestAnimDict('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer')  
+			while not HasAnimDictLoaded('anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer') do
+				Citizen.Wait(0)
+			end
+				TaskPlayAnim(ped,'anim@amb@clubhouse@tutorial@bkr_tut_ig3@machinic_loop_mechandplayer', 'machinic_loop_mechandplayer'', 1.0, 1.0, -1, 8, -1, true, true, true)
+			end
+		end
+	end
+	--[[End code chunk for animations.]]--
 					if doors[i]["locked"] == true then
                         FreezeEntityPosition(closeDoor, false)
                         if(i==1 or i==2 or i==3 or i==4) then

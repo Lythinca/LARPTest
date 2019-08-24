@@ -66,12 +66,14 @@ Citizen.CreateThread(function()
 		end
 	end
 
+--[[Code below is for lock state on the doors. Github seems to be playing up, and not properly coloring it.]]--
+
 		if doors[i]["locked"] == true then
                         FreezeEntityPosition(closeDoor, false)
                         if(i==1 or i==2 or i==3 or i==4) then
                             doors[1]["locked"] = false
                             doors[2]["locked"] = false
-							doors[3]["locked"] = false
+			    doors[3]["locked"] = false
                             doors[4]["locked"] = false
                         else
                             doors[i]["locked"] = false
@@ -81,7 +83,7 @@ Citizen.CreateThread(function()
                         if(i==1 or i==2 or i==3 or i==4) then
                             doors[1]["locked"] = true
                             doors[2]["locked"] = true
-							doors[3]["locked"] = true
+			    doors[3]["locked"] = true
                             doors[4]["locked"] = true
                         else
                             doors[i]["locked"] = true

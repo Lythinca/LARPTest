@@ -111,7 +111,8 @@ AddEventHandler('door:state', function(id, lockdoor)
         doors[id]["locked"] = lockdoor
     end
 end)
---[[Original code snippet for Animations
+--[[Original code snippet for Animations]]--
+--[[
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(1)
@@ -140,5 +141,5 @@ Citizen.CreateThread(function()
         end
     end
 end)
-
-end code snippet]]--
+]]--
+--[[end code snippet]]--
